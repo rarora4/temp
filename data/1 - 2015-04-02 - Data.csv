@@ -1,0 +1,11 @@
+uniqueID,StudyNum,age,sex,group,targFile,Date,block,trial,CueType,TargLoc,TargDirection,Congruency,TrialStartTime,targetOnTime,firstFix,Response,Correct,RT,LowRT
+1,4,2,M,5,Arrow,02-Apr-2015,0,1,1,UP,L,congruent,03:45:25,03:45:27,883,R,0,365,0
+1,4,2,M,5,Arrow,02-Apr-2015,0,2,1,UP,R,congruent,03:45:29,03:45:30,424,R,1,147,0
+1,4,2,M,5,Arrow,02-Apr-2015,1,1,1,UP,L,congruent,03:45:34,03:45:35,722,L,1,532,0
+1,4,2,M,5,Arrow,02-Apr-2015,1,2,1,UP,R,congruent,03:45:37,03:45:39,845,R,1,328,0
+1,4,2,M,5,Arrow,02-Apr-2015,2,1,1,UP,R,congruent,03:45:41,03:45:42,964,R,1,581,0
+1,4,2,M,5,Arrow,02-Apr-2015,2,2,1,UP,L,congruent,03:45:44,03:45:45,450,L,1,437,0
+1,4,2,M,5,Arrow,02-Apr-2015,3,1,1,UP,R,congruent,03:45:49,03:45:50,946,R,1,493,0
+1,4,2,M,5,Arrow,02-Apr-2015,3,2,1,UP,L,congruent,03:45:52,03:45:54,590,L,1,400,0
+1,4,2,M,5,Arrow,02-Apr-2015,4,1,1,UP,L,congruent,03:45:56,03:45:58,992,R,0,431,0
+1,4,2,M,5,Arrow,02-Apr-2015,4,2,1,UP,R,congruent,03:46:00,03:46:01,896,R,1,452,0

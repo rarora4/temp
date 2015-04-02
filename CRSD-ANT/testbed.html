@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+    <head>
+        <title>My experiment</title>
+        <script src="js/jquery.min.js"></script>	
+	<script src= "js/export.js"></script>
+
+    
+  	</head>
+    <body>
+	<div id="jspsych-target" style="height:300px">
+    </body>
+    <script>
+	var temp = "uniqueID,studyID,ANTversion,targFile,ANTdate,ANTtime,SessionDur,Session,Age,Sex,Group,ANT.N,med.all,";
+	temp += "mean.all,sd.all,min.all,max.all,alert,orient,conflict,pc.all,e.all,nocue,double,centre,spatial,cong,incong,";
+	temp += "med.C1T1,med.C1T2,med.C2T1,med.C2T2,med.C3T1,med.C3T2,med.C4T1,med.C4T2,mean.C1T1,mean.C1T2,mean.C2T1,mean.C2T2,";
+	temp += "mean.C3T1,mean.C3T2,mean.C4T1,mean.C4T2,e.nocue,e.double,e.centre,e.spatial,e.incong,e.cong,pc.C1T1,pc.C1T2,pc.C2T1,";
+	temp += "pc.C2T2,pc.C3T1,pc.C3T2,pc.C4T1,pc.C4T2\n,4,0.1,Arrow,02-Apr-2015,01:22:00,10:32.969,3,23,M,5,124,196,274,187.32,101,";
+	temp += "998,-50,15,-85,37.9,62.1,255,305,194,179,276,191,363,147,192,196,387,223,162,196,349,153,215,231,430,323,228,289,";
+	temp += "65.63,59.38,59.38,64.29,58.33,65.63,25,43.75,31.25,50,43.75,37.5,37.5,33.33";
+
+	createExportLink('aaa','fsfd.csv',temp);
+
+
+				var temp2 = "uniqueID,StudyNum,age,sex,group,targFile,Date,block,trial,CueType,TargLoc,TargDirection,Congruency,TrialStartTime,targetOnTime,firstFix,Response,Correct,RT,LowRT\n";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,0,1,4,UP,L,incongruent,01:22:06,01:22:07,952,R,0,599,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,0,2,3,UP,R,congruent,01:22:09,01:22:10,472,L,0,309,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,0,3,3,UP,L,incongruent,01:22:13,01:22:14,999,R,0,20,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,0,4,2,DOWN,R,incongruent,01:22:16,01:22:18,596,L,0,171,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,0,5,2,DOWN,L,incongruent,01:22:20,01:22:21,726,L,0,50,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,0,6,1,DOWN,R,congruent,01:22:24,01:22:25,615,L,0,521,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,0,7,2,UP,R,congruent,01:22:27,01:22:29,434,R,1,117,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,0,8,3,DOWN,L,congruent,01:22:31,01:22:32,570,R,0,102,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,0,9,4,UP,R,congruent,01:22:34,01:22:36,715,R,1,110,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,0,10,2,UP,L,incongruent,01:22:38,01:22:39,996,L,0,11,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,0,11,4,DOWN,R,incongruent,01:22:41,01:22:43,547,L,0,132,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,0,12,1,UP,L,congruent,01:22:45,01:22:46,676,R,0,147,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,0,13,3,UP,R,incongruent,01:22:48,01:22:50,701,R,1,165,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,0,14,1,DOWN,L,congruent,01:22:52,01:22:54,764,R,0,192,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,0,15,1,UP,L,incongruent,01:22:56,01:22:57,832,R,0,52,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,0,16,2,DOWN,R,congruent,01:22:59,01:23:01,683,R,1,255,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,0,17,4,UP,R,incongruent,01:23:03,01:23:04,702,R,1,1445,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,0,18,1,UP,R,congruent,01:23:07,01:23:09,509,L,0,86,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,0,19,2,DOWN,L,congruent,01:23:10,01:23:12,944,L,1,683,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,0,20,3,UP,L,congruent,01:23:14,01:23:15,779,L,1,1058,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,0,21,2,UP,L,congruent,01:23:17,01:23:19,723,None,0,1500,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,0,22,3,DOWN,L,incongruent,01:23:21,01:23:22,540,R,0,89,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,0,23,4,DOWN,L,congruent,01:23:24,01:23:26,627,R,0,161,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,0,24,1,DOWN,R,incongruent,01:23:28,01:23:29,956,R,1,169,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,0,25,4,DOWN,R,congruent,01:23:32,01:23:33,717,L,0,75,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,0,26,2,UP,R,incongruent,01:23:36,01:23:37,950,L,0,221,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,0,27,1,UP,R,incongruent,01:23:39,01:23:41,872,R,1,342,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,0,28,4,UP,L,congruent,01:23:43,01:23:44,904,R,0,18,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,0,29,3,DOWN,R,congruent,01:23:46,01:23:49,834,R,1,214,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,0,30,3,DOWN,R,incongruent,01:23:50,01:23:51,507,R,1,202,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,0,31,1,DOWN,L,incongruent,01:23:53,01:23:54,751,R,0,215,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,1,1,4,UP,L,incongruent,01:25:12,01:25:14,871,L,1,212,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,1,2,3,UP,L,congruent,01:25:16,01:25:18,984,L,1,998,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,1,3,4,UP,R,congruent,01:25:20,01:25:21,740,R,1,163,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,1,4,4,DOWN,L,congruent,01:25:23,01:25:25,900,R,0,137,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,1,5,3,DOWN,L,congruent,01:25:27,01:25:28,459,R,0,161,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,1,6,2,UP,L,incongruent,01:25:30,01:25:31,435,R,0,105,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,1,7,2,UP,R,congruent,01:25:34,01:25:35,497,R,0,79,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,1,8,3,DOWN,L,incongruent,01:25:37,01:25:39,616,R,0,30,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,1,9,4,UP,L,congruent,01:25:41,01:25:42,880,R,0,206,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,1,10,1,UP,L,congruent,01:25:44,01:25:45,475,R,0,181,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,1,11,1,DOWN,R,congruent,01:25:48,01:25:50,802,L,0,205,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,1,12,3,UP,R,incongruent,01:25:52,01:25:53,813,R,1,179,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,1,13,1,DOWN,L,congruent,01:25:55,01:25:57,604,R,0,97,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,1,14,2,UP,R,incongruent,01:25:59,01:26:00,938,R,1,195,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,1,15,1,DOWN,L,incongruent,01:26:02,01:26:03,434,L,0,26,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,1,16,4,DOWN,R,incongruent,01:26:06,01:26:07,933,R,0,71,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,1,17,2,DOWN,L,congruent,01:26:09,01:26:11,898,L,0,50,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,1,18,2,DOWN,L,incongruent,01:26:13,01:26:14,508,L,0,27,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,1,19,3,DOWN,R,congruent,01:26:16,01:26:17,447,L,0,223,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,1,20,2,DOWN,R,congruent,01:26:20,01:26:22,551,R,1,315,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,1,21,3,DOWN,R,incongruent,01:26:23,01:26:25,812,R,1,187,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,1,22,4,DOWN,R,congruent,01:26:27,01:26:29,795,R,1,106,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,1,23,1,UP,L,incongruent,01:26:30,01:26:32,620,L,0,20,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,1,24,3,UP,R,congruent,01:26:34,01:26:35,597,L,0,51,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,1,25,2,UP,L,congruent,01:26:37,01:26:39,741,R,0,171,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,1,26,2,DOWN,R,incongruent,01:26:41,01:26:42,798,R,1,196,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,1,27,1,UP,R,incongruent,01:26:45,01:26:46,769,R,1,181,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,1,28,4,UP,R,incongruent,01:26:48,01:26:49,647,R,0,66,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,1,29,3,UP,L,incongruent,01:26:52,01:26:53,834,R,0,146,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,1,30,1,UP,R,congruent,01:26:55,01:26:56,669,R,1,237,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,1,31,1,DOWN,R,incongruent,01:26:59,01:27:01,916,R,1,128,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,2,1,3,UP,L,congruent,01:27:02,01:27:03,528,L,0,85,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,2,2,3,DOWN,L,congruent,01:27:06,01:27:07,841,R,0,108,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,2,3,1,UP,R,congruent,01:27:09,01:27:11,836,L,0,72,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,2,4,1,DOWN,R,congruent,01:27:13,01:27:14,831,R,0,42,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,2,5,1,DOWN,R,incongruent,01:27:16,01:27:18,907,R,1,168,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,2,6,3,UP,R,congruent,01:27:20,01:27:21,836,L,0,53,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,2,7,1,UP,R,incongruent,01:27:23,01:27:24,561,R,1,147,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,2,8,3,DOWN,R,incongruent,01:27:27,01:27:28,788,R,0,46,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,2,9,4,UP,R,congruent,01:27:30,01:27:31,621,R,1,161,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,2,10,1,UP,L,incongruent,01:27:34,01:27:35,649,R,0,144,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,2,11,4,DOWN,L,congruent,01:27:37,01:27:38,513,R,0,220,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,2,12,4,DOWN,R,congruent,01:27:41,01:27:42,907,R,1,108,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,2,13,3,DOWN,R,congruent,01:27:44,01:27:46,811,R,1,155,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,2,14,2,DOWN,R,congruent,01:27:48,01:27:49,474,L,0,83,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,2,15,1,DOWN,L,incongruent,01:27:51,01:27:53,971,R,0,200,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,2,16,1,DOWN,L,congruent,01:27:55,01:27:56,946,R,0,10,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,2,17,1,UP,L,congruent,01:27:58,01:27:59,529,R,0,146,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,2,18,2,UP,L,congruent,01:28:02,01:28:03,656,R,0,170,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,2,19,2,UP,R,congruent,01:28:05,01:28:06,408,R,1,192,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,2,20,3,UP,R,incongruent,01:28:09,01:28:11,985,R,0,68,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,2,21,2,UP,L,incongruent,01:28:12,01:28:14,981,L,1,209,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,2,22,2,UP,R,incongruent,01:28:16,01:28:17,665,L,0,2,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,2,23,3,UP,L,incongruent,01:28:19,01:28:21,837,R,0,107,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,2,24,2,DOWN,L,congruent,01:28:23,01:28:24,941,R,0,105,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,2,25,3,DOWN,L,incongruent,01:28:26,01:28:28,839,R,0,6,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,2,26,4,UP,L,congruent,01:28:30,01:28:31,959,R,0,45,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,2,27,2,DOWN,L,incongruent,01:28:33,01:28:35,729,R,0,173,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,2,28,2,DOWN,R,incongruent,01:28:37,01:28:38,784,R,1,186,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,2,29,4,DOWN,R,incongruent,01:28:40,01:28:42,619,R,1,179,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,2,30,4,UP,R,incongruent,01:28:44,01:28:45,749,L,0,91,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,2,31,4,UP,L,incongruent,01:28:47,01:28:48,574,L,1,117,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,3,1,4,DOWN,R,incongruent,01:28:55,01:28:57,518,R,0,52,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,3,2,1,UP,R,congruent,01:28:59,01:29:00,783,R,1,116,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,3,3,2,DOWN,L,incongruent,01:29:02,01:29:04,516,R,0,172,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,3,4,2,UP,R,congruent,01:29:06,01:29:07,498,R,1,131,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,3,5,1,DOWN,R,congruent,01:29:10,01:29:11,883,L,0,626,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,3,6,4,UP,R,incongruent,01:29:13,01:29:14,670,L,0,20,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,3,7,3,UP,L,congruent,01:29:17,01:29:18,678,R,0,134,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,3,8,1,UP,L,incongruent,01:29:20,01:29:21,800,L,1,133,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,3,9,3,DOWN,R,congruent,01:29:24,01:29:26,525,R,1,431,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,3,10,4,UP,L,incongruent,01:29:27,01:29:28,742,R,0,8,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,3,11,2,UP,R,incongruent,01:29:31,01:29:32,991,R,1,159,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,3,12,4,DOWN,L,congruent,01:29:34,01:29:35,705,None,0,1500,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,3,13,4,UP,L,congruent,01:29:38,01:29:40,433,L,1,348,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,3,14,2,DOWN,R,congruent,01:29:41,01:29:42,468,R,1,101,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,3,15,1,DOWN,R,incongruent,01:29:45,01:29:46,888,L,0,87,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,3,16,3,DOWN,L,incongruent,01:29:48,01:29:49,669,R,0,52,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,3,17,1,UP,L,congruent,01:29:52,01:29:53,985,L,0,31,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,3,18,1,UP,R,incongruent,01:29:55,01:29:56,647,L,0,38,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,3,19,1,DOWN,L,incongruent,01:29:59,01:30:00,759,L,1,106,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,3,20,3,DOWN,L,congruent,01:30:02,01:30:03,549,L,0,77,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,3,21,2,UP,L,congruent,01:30:06,01:30:07,473,R,0,628,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,3,22,4,DOWN,R,congruent,01:30:09,01:30:10,728,L,0,276,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,3,23,3,UP,L,incongruent,01:30:13,01:30:14,641,R,0,130,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,3,24,2,DOWN,R,incongruent,01:30:16,01:30:18,804,R,1,270,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,3,25,3,UP,R,incongruent,01:30:20,01:30:21,583,R,1,222,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,3,26,2,UP,L,incongruent,01:30:23,01:30:25,690,R,0,1,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,3,27,2,DOWN,L,congruent,01:30:27,01:30:28,758,L,1,334,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,3,28,3,DOWN,R,incongruent,01:30:30,01:30:32,881,L,0,318,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,3,29,3,UP,R,congruent,01:30:34,01:30:35,821,R,1,297,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,3,30,1,DOWN,L,congruent,01:30:37,01:30:39,882,R,0,174,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,3,31,4,UP,R,congruent,01:30:41,01:30:42,471,L,0,38,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,4,1,3,UP,L,congruent,01:30:44,01:30:46,653,L,1,119,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,4,2,2,DOWN,L,incongruent,01:30:48,01:30:49,799,L,0,27,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,4,3,1,UP,L,congruent,01:30:51,01:30:52,496,R,0,257,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,4,4,4,UP,L,congruent,01:30:55,01:30:56,640,R,0,0,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,4,5,1,UP,R,incongruent,01:30:58,01:31:00,817,L,0,40,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,4,6,2,DOWN,L,congruent,01:31:02,01:31:03,791,L,0,4,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,4,7,4,DOWN,R,congruent,01:31:05,01:31:07,542,L,0,80,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,4,8,2,UP,R,incongruent,01:31:09,01:31:10,502,R,1,196,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,4,9,2,UP,L,incongruent,01:31:12,01:31:14,998,R,0,115,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,4,10,4,UP,R,incongruent,01:31:16,01:31:17,615,L,0,77,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,4,11,3,UP,R,congruent,01:31:19,01:31:20,476,L,0,33,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,4,12,1,DOWN,R,incongruent,01:31:23,01:31:24,662,R,0,80,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,4,13,2,UP,L,congruent,01:31:26,01:31:27,433,R,0,29,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,4,14,3,DOWN,R,incongruent,01:31:30,01:31:31,536,R,1,223,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,4,15,1,UP,R,congruent,01:31:33,01:31:35,708,L,0,202,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,4,16,1,UP,L,incongruent,01:31:37,01:31:38,486,L,0,70,1\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,4,17,2,DOWN,R,incongruent,01:31:41,01:31:42,522,R,1,433,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,4,18,2,UP,R,congruent,01:31:44,01:31:46,987,L,0,207,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,4,19,2,DOWN,R,congruent,01:31:48,01:31:49,806,L,0,328,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,4,20,1,DOWN,L,incongruent,01:31:51,01:31:52,447,L,1,210,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,4,21,3,DOWN,L,incongruent,01:31:55,01:31:56,839,L,1,509,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,4,22,1,DOWN,R,congruent,01:31:58,01:32:00,961,R,1,554,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,4,23,4,UP,L,incongruent,01:32:02,01:32:03,865,L,1,646,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,4,24,4,UP,R,congruent,01:32:05,01:32:06,635,L,0,358,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,4,25,1,DOWN,L,congruent,01:32:09,01:32:10,894,L,1,489,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,4,26,3,DOWN,R,congruent,01:32:12,01:32:13,773,R,1,621,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,4,27,3,UP,L,incongruent,01:32:16,01:32:17,506,L,1,619,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,4,28,4,DOWN,L,congruent,01:32:19,01:32:20,511,L,1,482,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,4,29,3,UP,R,incongruent,01:32:23,01:32:24,853,L,0,479,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,4,30,4,DOWN,R,incongruent,01:32:26,01:32:27,678,L,0,425,0\n'";
+	temp2 += "1,4,23,M,5,Arrow,02-Apr-2015,4,31,3,DOWN,L,congruent,01:32:30,01:32:31,947,L,1,387,0\n'";
+
+
+	createExportLink('aaa','asdf.csv',temp2);
+    </script>
+</html>

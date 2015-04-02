@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+    <head>
+        <title>My experiment</title>
+        <script src="jquery.min.js"></script>	
+	<script src= "export.js"></script>
+
+    
+  	</head>
+    <body>
+	<div id="jspsych-target" style="height:300px">
+    </body>
+    <script>
+	createExportLink('aaa','fsfd.csv','this is a sample data.');
+    </script>
+</html>
